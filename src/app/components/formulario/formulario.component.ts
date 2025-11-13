@@ -12,6 +12,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 interface SearchForm {
   origin: FormControl<string>;
@@ -27,6 +28,7 @@ interface SearchForm {
     MatFormFieldModule,
     MatInputModule,
     MatButtonToggleModule,
+    MatTooltipModule,
   ],
   templateUrl: './formulario.component.html',
   styleUrl: './formulario.component.scss',

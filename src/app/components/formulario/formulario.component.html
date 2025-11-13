@@ -34,11 +34,15 @@
         type="button"
         (click)="swap()"
         aria-label="Inverter origem e destino"
+        #tooltip="matTooltip"
+        matTooltip="Inverter origem e destino"
       >
         <mat-icon>sync_alt</mat-icon>
       </button>
 
       <mat-form-field appearance="outline" class="campo">
+        <!-- mat-icon com matPrefix e matSuffix: Posiciona os ícones 
+         à esquerda e à direita do input, respectivamente. -->
         <mat-icon matPrefix>flight_land</mat-icon>
         <input matInput placeholder="Destino" formControlName="destination" />
         <button
