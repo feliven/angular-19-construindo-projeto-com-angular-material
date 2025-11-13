@@ -1,17 +1,14 @@
 <header>
-  <a href="/">
+  <a routerLink="/">
     <img src="/logo-jornada.png" alt="" />
   </a>
-  <div class="botoes">
-    <button mat-button>
-      <a href="#">Vender milhas</a>
-    </button>
-    <button mat-button>
-      <a href="#">Sobre</a>
-    </button>
-    <button mat-flat-button><a href="#">Cadastre-se</a></button>
-    <button mat-stroked-button class="botao-login">
-      <a href="#"><span class="material-symbols-outlined">login</span>Login</a>
-    </button>
-  </div>
+  <nav class="botoes">
+    <a mat-button routerLink="/vender-milhas">Vender milhas</a>
+    <a mat-button routerLink="/sobre">Sobre</a>
+    <a mat-flat-button routerLink="/cadastro">Cadastre-se</a>
+    <a mat-stroked-button routerLink="/login" class="botao-login">
+      <span class="material-symbols-outlined" aria-hidden="true">login</span>
+      Login
+    </a>
+  </nav>
 </header>

@@ -7,6 +7,9 @@ header {
 }
 
 a {
+  display: flex;
+  align-items: center;
+  text-align: center;
   text-decoration: none;
   color: var(--mat-sys-on-primary);
 }
@@ -16,21 +19,16 @@ a {
   align-items: center;
   gap: 1rem;
   margin-left: auto;
+  --mdc-text-button-label-text-color: var(--mat-sys-on-primary);
 }
 
 .botao-login {
   display: flex;
   align-items: center;
-}
-
-.botao-login a {
-  color: inherit;
-  display: flex;
-  align-items: center;
   gap: 0.5rem;
 }
 
-.botao-login a span {
+.botao-login span {
   font-size: 1rem;
   line-height: 1;
   vertical-align: middle;

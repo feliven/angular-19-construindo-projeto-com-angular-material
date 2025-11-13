@@ -5,6 +5,7 @@ import { CabecalhoComponent } from './components/cabecalho/cabecalho.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [MatButtonModule, CabecalhoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
