@@ -1,0 +1,52 @@
+<section>
+  <h1>Passagens</h1>
+
+  <p class="botoes-ida-volta">
+    <mat-button-toggle-group>
+      <mat-button-toggle value="ida-volta">Ida e volta</mat-button-toggle>
+      <mat-button-toggle value="so-ida">Somente ida</mat-button-toggle>
+    </mat-button-toggle-group>
+  </p>
+
+  <div class="formulario">
+    <form
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      class="origem-destino-buscar"
+    >
+      <mat-form-field appearance="outline" class="campo">
+        <mat-icon matPrefix>flight_takeoff</mat-icon>
+        <input matInput placeholder="Origem" formControlName="origin" />
+        <button
+          mat-icon-button
+          matSuffix
+          type="button"
+          (click)="openOriginDialog()"
+          aria-label="Buscar origem"
+        >
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <div class="botao-alternar">
+        <mat-icon>sync_alt</mat-icon>
+      </div>
+
+      <mat-form-field appearance="outline" class="campo">
+        <mat-icon matPrefix>flight_land</mat-icon>
+        <input matInput placeholder="Destino" formControlName="destination" />
+        <button
+          mat-icon-button
+          matSuffix
+          type="button"
+          (click)="openDestinationDialog()"
+          aria-label="Buscar destino"
+        >
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <button mat-fab extended type="submit">Buscar</button>
+    </form>
+  </div>
+</section>

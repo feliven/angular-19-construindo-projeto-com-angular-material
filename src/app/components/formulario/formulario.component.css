@@ -1,0 +1,68 @@
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 2.25rem;
+  background-color: var(--mat-sys-surface-container);
+  border-radius: 1rem;
+  margin: 2rem 10rem;
+}
+
+h1 {
+  margin-top: 1rem;
+}
+
+.botoes-ida-volta {
+  margin-top: 1rem;
+}
+
+.formulario {
+  .origem-destino-buscar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .campo {
+    width: 280px;
+  }
+
+  .botao-alternar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--mat-sys-secondary);
+    width: 32px;
+  }
+
+  button [type="submit"] {
+    width: 5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  section {
+    margin: 2rem 2rem;
+    padding: 1rem 2rem;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .botoes-ida-volta {
+    align-self: center;
+  }
+
+  .formulario {
+    .origem-destino-buscar {
+      flex-direction: column;
+    }
+
+    .campo,
+    button {
+      width: 75%;
+    }
+  }
+}
