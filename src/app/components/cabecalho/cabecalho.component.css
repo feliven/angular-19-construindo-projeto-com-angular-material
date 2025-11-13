@@ -14,7 +14,7 @@ a {
   color: var(--mat-sys-on-primary);
 }
 
-.botoes {
+nav {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -32,4 +32,25 @@ a {
   font-size: 1rem;
   line-height: 1;
   vertical-align: middle;
+}
+
+@media (max-width: 950px) {
+  header {
+    flex-wrap: wrap;
+    padding: 1rem 1rem;
+  }
+  header a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  header a img {
+    display: block;
+    margin: 0 auto;
+    padding: 0 0 1rem;
+  }
+  nav {
+    width: 100%;
+    justify-content: flex-end;
+  }
 }
