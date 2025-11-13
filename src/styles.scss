@@ -1,14 +1,14 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.dev/guide/theming
 @use "@angular/material" as mat;
-
+@use "./theme-colors" as tema;
 html {
   @include mat.theme(
     (
       color: (
         theme-type: light,
-        primary: mat.$azure-palette,
-        tertiary: mat.$blue-palette,
+        primary: tema.$paleta-primaria,
+        tertiary: tema.$paleta-terciaria,
       ),
       typography: Roboto,
       density: 0,
