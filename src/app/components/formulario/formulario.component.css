@@ -24,13 +24,15 @@ h1 {
   .origem-destino-buscar {
     display: flex;
     align-items: stretch;
-    gap: 12px;
+    gap: 0.2rem;
     flex-wrap: wrap;
     margin-bottom: 0.75rem;
   }
 
   .campo {
-    width: 280px;
+    width: 35%;
+    max-width: 280px;
+    min-width: 150px;
   }
 
   .botao-alternar {
@@ -47,6 +49,7 @@ h1 {
 
   button[type="submit"] {
     width: 5rem;
+    margin-left: 1rem;
   }
 
   .mat-mdc-form-field {
@@ -54,7 +57,7 @@ h1 {
   }
 }
 
-@media (max-width: 1008px) {
+@media (max-width: 950px) {
   section {
     margin: 2rem 2rem;
     padding: 1rem 2rem;
@@ -72,15 +75,18 @@ h1 {
     .origem-destino-buscar {
       flex-direction: column;
       align-items: center;
+      gap: 0.5rem;
     }
 
     .campo,
     button[type="submit"] {
       width: 95%;
+      max-width: none;
     }
 
     button[type="submit"] {
-      margin-top: 1rem;
+      margin-left: 0;
+      margin-top: 1.25rem;
       margin-bottom: 0.5rem;
     }
   }
