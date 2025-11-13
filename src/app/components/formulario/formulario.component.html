@@ -28,7 +28,13 @@
         </button>
       </mat-form-field>
 
-      <button mat-button class="botao-alternar">
+      <button
+        mat-button
+        class="botao-alternar"
+        type="button"
+        (click)="swap()"
+        aria-label="Inverter origem e destino"
+      >
         <mat-icon>sync_alt</mat-icon>
       </button>
 

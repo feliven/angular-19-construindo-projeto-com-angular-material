@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-cabecalho',
   imports: [MatButtonModule, RouterLink],
   templateUrl: './cabecalho.component.html',
-  styleUrl: './cabecalho.component.css',
-  standalone:true
+  styleUrl: './cabecalho.component.scss',
+  standalone: true,
 })
 export class CabecalhoComponent {}

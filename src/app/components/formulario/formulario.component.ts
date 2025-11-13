@@ -4,48 +4,62 @@ import {
   FormBuilder,
   FormGroup,
   Validators,
+  FormControl,
+  NonNullableFormBuilder,
 } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatIcon } from '@angular/material/icon';
-import { MatFormField } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+
+interface SearchForm {
+  origin: FormControl<string>;
+  destination: FormControl<string>;
+}
 
 @Component({
   selector: 'app-formulario',
   imports: [
     ReactiveFormsModule,
     MatButtonModule,
-    MatIcon,
-    MatFormField,
+    MatIconModule,
+    MatFormFieldModule,
     MatInputModule,
     MatButtonToggleModule,
   ],
   templateUrl: './formulario.component.html',
-  styleUrl: './formulario.component.css',
+  styleUrl: './formulario.component.scss',
+  standalone: true,
 })
 export class FormularioComponent {
-  form: FormGroup;
+  form: FormGroup<SearchForm>;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: NonNullableFormBuilder) {
     this.form = this.formBuilder.group({
-      origin: ['', Validators.required],
-      destination: ['', Validators.required],
+      origin: this.formBuilder.control('', { validators: Validators.required }),
+      destination: this.formBuilder.control('', {
+        validators: Validators.required,
+      }),
     });
   }
 
-  openOriginDialog() {
-    // TODO
+  openOriginDialog(): void {
+    // TODO: implement origin selection dialog
   }
 
-  openDestinationDialog() {
-    // TODO
+  openDestinationDialog(): void {
+    // TODO: implement destination selection dialog
   }
 
-  onSubmit() {
-    if (this.form.valid) {
-      // handle search
-      console.log(this.form.value);
-    }
+  swap(): void {
+    const o = this.form.controls.origin.value;
+    const d = this.form.controls.destination.value;
+    this.form.patchValue({ origin: d, destination: o });
+  }
+
+  onSubmit(): void {
+    if (this.form.invalid) return;
+    console.log(this.form.value);
   }
 }
